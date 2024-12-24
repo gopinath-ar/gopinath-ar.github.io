@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hint 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000; /* Black background */
+            color: white; /* White text */
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for contrast on black */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White shadow for better visibility on black background */
+        }
+        .guess-container {
+            margin-bottom: 20px;
+        }
+        .input-box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            text-align: center;
+            margin-right: 5px;
+        }
+        .feedback {
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .submit-button {
+            background-color: rgba(89, 78, 231, 0.597); /* Blue background */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 10px 20px; /* Padding for size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .submit-button:hover {
+            background-color: darkblue; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guess!</h1>
+        <div id="guess-container" class="guess-container">
+            <input type="text" id="box1" class="input-box" maxlength="1">
+            <input type="text" id="box2" class="input-box" maxlength="1">
+            <input type="text" id="box3" class="input-box" maxlength="1">
+            <input type="text" id="box4" class="input-box" maxlength="1">
+            <input type="text" id="box5" class="input-box" maxlength="1">
+            <button class="submit-button" onclick="submitGuess()">Submit</button>
+        </div>
+        <div id="feedback"></div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const _0x2e005c=_0x18c4;(function(_0x4ff3c9,_0x5bc874){const _0x3fcaa9=_0x18c4,_0x3b2ff4=_0x4ff3c9();while(!![]){try{const _0x12a6be=parseInt(_0x3fcaa9(0x1df))/0x1*(-parseInt(_0x3fcaa9(0x1f4))/0x2)+parseInt(_0x3fcaa9(0x1d3))/0x3+-parseInt(_0x3fcaa9(0x1f0))/0x4*(parseInt(_0x3fcaa9(0x1d6))/0x5)+parseInt(_0x3fcaa9(0x1e9))/0x6*(parseInt(_0x3fcaa9(0x1d9))/0x7)+parseInt(_0x3fcaa9(0x1e4))/0x8+-parseInt(_0x3fcaa9(0x1eb))/0x9+parseInt(_0x3fcaa9(0x1e7))/0xa;if(_0x12a6be===_0x5bc874)break;else _0x3b2ff4['push'](_0x3b2ff4['shift']());}catch(_0x167466){_0x3b2ff4['push'](_0x3b2ff4['shift']());}}}(_0x22d2,0x464e7));const theSecret=_0x2e005c(0x1f2),secretWord=atob(theSecret)[_0x2e005c(0x1db)]('')['slice'](0x0,0x5)[_0x2e005c(0x1dd)]('');let attempts=0x0;const maxAttempts=0xa;function submitGuess(){const _0x18829f=_0x2e005c,_0x55880d=document[_0x18829f(0x1e3)](_0x18829f(0x1f3)),_0x4ecc4f=Array[_0x18829f(0x1ed)](_0x55880d)[_0x18829f(0x1e6)](_0x3598b5=>_0x3598b5[_0x18829f(0x1d2)]['toUpperCase']()[_0x18829f(0x1e8)]()),_0x13930a=_0x4ecc4f[_0x18829f(0x1dd)]('');if(_0x13930a[_0x18829f(0x1d4)]!==0x5){alert(_0x18829f(0x1e0));return;}attempts++;if(attempts>maxAttempts){document[_0x18829f(0x1f1)](_0x18829f(0x1dc))[_0x18829f(0x1e1)]=_0x18829f(0x1de),_0x55880d[_0x18829f(0x1e2)](_0x5c230f=>_0x5c230f[_0x18829f(0x1f7)]=!![]),document[_0x18829f(0x1ee)](_0x18829f(0x1f5))[_0x18829f(0x1f7)]=!![];return;}const _0x13a555=getFeedback(_0x13930a);displayFeedback(_0x13a555,_0x13930a),_0x13930a===secretWord&&(document[_0x18829f(0x1f1)](_0x18829f(0x1dc))[_0x18829f(0x1e1)]='Congratulations!\x20You\x20guessed\x20the\x20word!',_0x55880d[_0x18829f(0x1e2)](_0x2151fb=>_0x2151fb['disabled']=!![]),document[_0x18829f(0x1ee)](_0x18829f(0x1f5))[_0x18829f(0x1f7)]=!![]);}function getFeedback(_0x36b8d6){const _0x3fcc1d=_0x2e005c;let _0x481a6a=0x0,_0x1235e8=0x0;const _0x19da28=secretWord[_0x3fcc1d(0x1db)](''),_0x30fd1a=_0x36b8d6[_0x3fcc1d(0x1db)]('');for(let _0xe7874b=0x0;_0xe7874b<0x5;_0xe7874b++){_0x30fd1a[_0xe7874b]===_0x19da28[_0xe7874b]&&(_0x481a6a++,_0x19da28[_0xe7874b]=null,_0x30fd1a[_0xe7874b]=null);}for(let _0x34cf65=0x0;_0x34cf65<0x5;_0x34cf65++){if(_0x30fd1a[_0x34cf65]!==null&&_0x19da28[_0x3fcc1d(0x1ec)](_0x30fd1a[_0x34cf65])){_0x1235e8++;const _0x30328e=_0x19da28['indexOf'](_0x30fd1a[_0x34cf65]);_0x19da28[_0x30328e]=null;}}return{'blackPegs':_0x481a6a,'whitePegs':_0x1235e8};}function _0x22d2(){const _0x3fdb18=['.input-box','826114DSALLA','button','\x20-\x20Correct\x20positions:\x20','disabled','value','289287tqePwd','length','blackPegs','730aKIkrp','whitePegs','createElement','413bWOzwL','div','split','result','join','Game\x20Over!','1VknwwO','Please\x20enter\x20a\x205-letter\x20word.','innerText','forEach','querySelectorAll','1526568LZFvjt','Guess:\x20','map','5347480lRNtrt','trim','44424rJszFa','feedback','4908528CsROIh','includes','from','querySelector',',\x20Wrong\x20positions:\x20','340HmRpEW','getElementById','UEFSSVM='];_0x22d2=function(){return _0x3fdb18;};return _0x22d2();}function _0x18c4(_0x1e365a,_0x2368d7){const _0x22d2bc=_0x22d2();return _0x18c4=function(_0x18c4ea,_0x2eda09){_0x18c4ea=_0x18c4ea-0x1d2;let _0x3dbbb3=_0x22d2bc[_0x18c4ea];return _0x3dbbb3;},_0x18c4(_0x1e365a,_0x2368d7);}function displayFeedback(_0x4e85ef,_0x3a6935){const _0x10bc06=_0x2e005c,_0x349d=document[_0x10bc06(0x1f1)](_0x10bc06(0x1ea)),_0x273304=document[_0x10bc06(0x1d8)](_0x10bc06(0x1da));let _0x541984=_0x10bc06(0x1e5)+_0x3a6935+_0x10bc06(0x1f6)+_0x4e85ef[_0x10bc06(0x1d5)]+_0x10bc06(0x1ef)+_0x4e85ef[_0x10bc06(0x1d7)];_0x273304['innerText']=_0x541984,_0x349d['appendChild'](_0x273304);}
+    </script>
+</body>
+</html>
